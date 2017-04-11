@@ -73,18 +73,17 @@ namespace DateCalculator
             switch (index)
             {
                 case 0: lbResultDateCalc.Content = interval.Days +
-                    CalculateSuffix(Math.Abs(interval.Days % 100), new string[] { " день", " дня", " дней" });
+                    CalculateSuffix((Int32)Math.Abs(interval.Days % 100), new string[] { " день", " дня", " дней" });
                     break;
                 case 1: lbResultDateCalc.Content = interval.TotalHours +
-                    CalculateSuffix(Math.Abs(interval.Days % 100), new string[] { " час", " часа", " часов" });
+                    CalculateSuffix((Int32)Math.Abs(interval.TotalHours % 100), new string[] { " час", " часа", " часов" });
                     break;
                 case 2: lbResultDateCalc.Content = interval.TotalMinutes +
-                    CalculateSuffix(Math.Abs(interval.Days % 100), new string[] { " минута", " минуты", " минут" });
+                    CalculateSuffix((Int32)Math.Abs(interval.TotalMinutes % 100), new string[] { " минута", " минуты", " минут" });
                     break;
                 case 3: lbResultDateCalc.Content = interval.TotalSeconds +
-                    CalculateSuffix(Math.Abs(interval.Days % 100), new string[] { " секунда", " секунды", " секунд" });
+                    CalculateSuffix((Int32)Math.Abs(interval.TotalSeconds % 100), new string[] { " секунда", " секунды", " секунд" });
                     break;
-
             }
         }
 
