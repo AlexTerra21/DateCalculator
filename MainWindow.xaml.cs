@@ -86,8 +86,13 @@ namespace DateCalculator
                     break;
             }
         }
-
-
+        
+        ///<summary>
+        /// Определение правильного окончания при выведении числительных
+        /// Например 1 час, 3 часа, 10 секунд и т.д.
+        /// </summary>
+        ///
+        ///
         private string CalculateSuffix(int lastTwoDigits, string[] suffix)
         {
             // Выделяем последнюю цифру для правильного вывода дней, дня, день
